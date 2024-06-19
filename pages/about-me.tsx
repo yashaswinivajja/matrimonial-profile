@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import { useState } from "react";
+import Image from "next/image";
 
 export default function AboutMe() {
   const router = useRouter();
@@ -33,35 +34,35 @@ export default function AboutMe() {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 bg-opacity-50">
       <form
         onSubmit={handleSubmit}
-        className="p-8 bg-white rounded-lg shadow-md"
+        className="bg-white p-8 rounded-lg shadow-lg"
       >
-        <h2 className="mb-6 text-2xl font-bold">
+        <h2 className="text-2xl font-bold text-center mb-6">
           About Me & Partner Preferences
         </h2>
-        <div className="mb-4">
+        <div>
           <label className="block mb-2">About Me</label>
           <textarea
             name="aboutMe"
             value={form.aboutMe}
             onChange={handleChange}
-            className="w-full px-4 py-2 border rounded-lg"
             rows={4}
+            className="w-full px-4 py-2 border rounded-lg"
           />
         </div>
-        <div className="mb-4">
+        <div>
           <label className="block mb-2">Partner Preferences</label>
           <textarea
             name="partnerPreferences"
             value={form.partnerPreferences}
             onChange={handleChange}
-            className="w-full px-4 py-2 border rounded-lg"
             rows={4}
+            className="w-full px-4 py-2 border rounded-lg"
           />
         </div>
-        <div className="mb-4">
+        <div>
           <label className="block mb-2">Preferred Age Range</label>
           <input
             type="text"
@@ -71,7 +72,7 @@ export default function AboutMe() {
             className="w-full px-4 py-2 border rounded-lg"
           />
         </div>
-        <div className="mb-4">
+        <div>
           <label className="block mb-2">Preferred Height</label>
           <input
             type="text"
@@ -81,7 +82,7 @@ export default function AboutMe() {
             className="w-full px-4 py-2 border rounded-lg"
           />
         </div>
-        <div className="mb-4">
+        <div>
           <label className="block mb-2">Preferred Education Level</label>
           <input
             type="text"
@@ -91,7 +92,7 @@ export default function AboutMe() {
             className="w-full px-4 py-2 border rounded-lg"
           />
         </div>
-        <div className="mb-4">
+        <div>
           <label className="block mb-2">Preferred Occupation</label>
           <input
             type="text"
@@ -101,7 +102,7 @@ export default function AboutMe() {
             className="w-full px-4 py-2 border rounded-lg"
           />
         </div>
-        <div className="mb-4">
+        <div>
           <label className="block mb-2">Preferred Location</label>
           <input
             type="text"
@@ -113,7 +114,7 @@ export default function AboutMe() {
         </div>
         <button
           type="submit"
-          className="w-full px-4 py-2 text-white bg-blue-600 rounded-lg"
+          className="w-full px-4 py-2 text-white bg-orange-500 rounded-lg"
         >
           Submit
         </button>

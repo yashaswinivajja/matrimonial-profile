@@ -29,12 +29,12 @@ export default function EducationalInfo() {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 bg-opacity-50">
       <form
         onSubmit={handleSubmit}
-        className="p-8 bg-white rounded-lg shadow-md"
+        className="w-full max-w-lg p-8 mt-8 bg-white bg-opacity-90 rounded-lg shadow-md"
       >
-        <h2 className="mb-6 text-2xl font-bold">
+        <h2 className="mb-6 text-2xl font-bold text-center">
           Educational Info & Family Details
         </h2>
         <div className="mb-4">
@@ -108,7 +108,7 @@ export default function EducationalInfo() {
           />
         </div>
         <div className="mb-4">
-          <label className="block mb-2">Degree/Other Field of Study</label>
+          <label className="block mb-2">Degree/Other field of study</label>
           <input
             type="text"
             name="degree"
@@ -119,7 +119,7 @@ export default function EducationalInfo() {
         </div>
         <button
           type="submit"
-          className="w-full px-4 py-2 text-white bg-blue-600 rounded-lg"
+          className="w-full px-4 py-2 text-white bg-orange-600 rounded-lg"
         >
           Continue
         </button>
